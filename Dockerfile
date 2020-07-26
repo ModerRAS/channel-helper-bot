@@ -2,8 +2,7 @@ FROM python:rc-alpine
 
 WORKDIR /app
 
-COPY ./*.py /app/
-COPY ./requirements.txt /app/
+COPY . /app/
 
 RUN apk add --no-cache libstdc++ &&\
     apk add --no-cache --virtual .build-deps  \
